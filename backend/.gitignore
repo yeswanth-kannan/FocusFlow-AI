@@ -1,0 +1,22 @@
+# Python
+backend/venv/
+__pycache__/
+*.pyc
+
+# Database
+backend/*.db
+
+# Environment
+backend/.env
+
+# Node
+frontend/node_modules/
+
+# Build
+frontend/dist/
+
+# IDE
+.vscode/
+
+# Logs
+*.log
