@@ -5,9 +5,10 @@ export async function getTasks() {
   return response.data;
 }
 
-export async function createTask(title) {
+export async function createTask(title, priority) {
   const response = await api.post("/tasks", {
     title,
+    priority,
   });
 
   return response.data;

@@ -4,8 +4,11 @@ from app.models import Task
 from app.schemas import TaskCreate
 
 
-def create_task(db: Session, task: TaskCreate):
-    new_task = Task(title=task.title,priority=task.priority)
+def create_task(db, task):
+    new_task = Task(
+        title=task.title,
+        priority=task.priority,
+    )
 
     db.add(new_task)
     db.commit()

@@ -45,10 +45,17 @@ export default function TaskCard({
             </h2>
 
             <div className="flex gap-3 mt-3">
-
-              <Badge className="bg-blue-100 text-blue-700 hover:bg-blue-100">
-                Medium
-              </Badge>
+            <Badge
+              className={
+                task.priority === "High"
+                ? "bg-red-100 text-red-700"
+                : task.priority === "Low"
+                ? "bg-green-100 text-green-700"
+                : "bg-yellow-100 text-yellow-700"
+              }
+            >
+              {task.priority}
+            </Badge>
 
               <Badge
                 variant="outline"

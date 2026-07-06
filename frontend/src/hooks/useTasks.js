@@ -14,10 +14,10 @@ export default function useTasks() {
     setTasks(data);
   }
 
-  async function addTask(title) {
-    await createTask(title);
-    refresh();
-  }
+  async function addTask(title, priority) {
+  await createTask(title, priority);
+  refresh();
+}
 
   async function deleteTask(id) {
     await removeTask(id);
